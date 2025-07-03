@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html/ JS tasks</title>
+  </head>
+  <body>
+    <input id="name" type="text" placeholder="Name" />
+    <input id="age" type="text" placeholder="Age" />
+    <button onclick="submitData()">Submit</button>
+    <script>
+      function submitData() {
+        const name = document.getElementById("name").value;
+        const age = document.getElementById("age").value;
+        if (!name || !age) {
+          window.alert("Check Submited data!");
+          return;
+        }
+        const perosn = {
+          name: name,
+          age: age,
+          date: new Date(),
+        };
+        console.log(perosn);
+        window.alert(
+          `Your Name :${perosn.name} , age : ${perosn.age} , date : ${perosn.date}`
+        );
+      }
+    </script>
+  </body>
+</html>
