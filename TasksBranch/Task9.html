@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html/ JS tasks</title>
+  </head>
+  <body>
+    <button onclick="getIP()">Get ip</button>
+
+    <script>
+      function getIP() {
+        fetch("https://api.ipify.org/")
+          .then((response) => response.text())
+          .then((ip) => {
+            console.log("Your IP is:", ip);
+          })
+          .catch((error) => {
+            console.error("Error fetching IP:", error);
+          });
+      }
+    </script>
+  </body>
+</html>
