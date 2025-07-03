@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E</title>
+  </head>
+  <body>
+    <button id="click-btn">Click Me</button>
+    <script>
+      function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          let j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+      }
+
+      const btn = document.getElementById("click-btn");
+      btn.addEventListener("click", () => {
+        let arr = [];
+        for (let i = 0; i <= 100; i++) {
+          arr.push(i);
+        }
+        shuffleArray(arr);
+        console.log(arr);
+      });
+    </script>
+  </body>
+</html>

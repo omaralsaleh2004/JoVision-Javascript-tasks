@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B</title>
+  </head>
+  <body>
+    <button id="click-btn">Click Me</button>
+    <script>
+      const btn = document.getElementById("click-btn");
+      btn.addEventListener("click", () => {
+        let arr = [];
+        for (let i = 0; i <= 100; i++) {
+          arr.push(i);
+        }
+        for (let i = 101; i <= 150; i++) {
+          arr.push(i);
+        }
+        console.log(arr);
+      });
+    </script>
+  </body>
+</html>
