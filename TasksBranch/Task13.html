@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Age Estimator</title>
+  </head>
+  <body>
+    <input type="text" id="name" placeholder="Name" title="Name" />
+    <button onclick="getAge()">Submit</button>
+
+    <script>
+      function getAge() {
+        const name = document.getElementById("name").value;
+
+        if (!name) {
+          alert("Please enter a name.");
+          return;
+        }
+
+        fetch(`https://api.agify.io?name=${name}`)
+          .then((response) => response.json())
+          .then(({ name, age }) => {
+            alert(`Your name is: ${name}\nYour age is: ${age}`);
+          })
+          .catch((error) => {
+            alert("error : ", error);
+          });
+      }
+    </script>
+  </body>
+</html>
